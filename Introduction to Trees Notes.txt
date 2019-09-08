@@ -1,0 +1,27 @@
+** Introduction to Tree Methods **
+
+In trees we have:
+-Nodes
+ Split for the value of a certain attribute
+-Edges
+ Outcome of a split to next node
+-Root
+ The node that performs the first split
+-Leaves
+ Terminal nodes that predicts the outcome
+
+
+Entropy and Information gain are the Mathematical methods of choosing the best split.
+
+-Entropy
+ Entropy is a measure of randomness. In other words, its a measure of unpredictability.
+ Entropy is the measures of impurity, disorder or uncertainty in a bunch of examples.
+ Entropy controls how a Decision Tree decides to split the data. It actually effects how a Decision Tree draws its boundaries.
+
+
+-Information Gain
+ It measures how much “information” a feature gives us about the class.
+ Information gain is the main key that is used by Decision Tree Algorithms to construct a Decision Tree.
+ Decision Trees algorithm will always tries to maximize Information gain.
+ An attribute with highest Information gain will tested/split first.
+

@@ -1,0 +1,27 @@
+** Random Forest **
+
+-To improve performance, we can use many trees with a random sample of features chosen as the split
+-The primary weakness of decision tree, is that they don't have the best predictive accuracy. 
+-This is partially due to high variance, meaning that differnet splits in the training data can lead to very differnt trees.
+-Bagging is the process of reducing the variance.
+
+-We can build of the idea of bagging by utilizing by random forest.
+-Random forest, is a better version of these bagged trees that has better performance
+
+-We will be creating an ensemble of decision trees, using bootstrap samples of the training set
+-Bootstrap samples of the training set simply means sampling for the training set with replacement.
+
+-However, we are building each tree and each type of split is considered a random sample of m features chosen as a candidate from the full set of p features
+-The split is only allowed to one of them m features 
+
+
+-A new random sample of features is chosen for 'every single tree at every single split'
+-For classification, m is typically chosen to be the square root of p
+
+
+
+
+~~ What's the point ? ~~
+> Suppose there is 'one very strong feature' in the dataset. When used "bagged" trees, most of the trees will use that feature as the top split, resulting in an ensemble of similar trees that are 'highly corelated'
+> Averaging highly correlated quantities does not significantly reduce variance
+> By randomly leaving out candidates features from each split, 'Random Forests "decorrelates" the trees', such that the averaging process can reduce the variance of the resulting model
